@@ -39,3 +39,18 @@ response = requests.get('http://localhost:3000/playlists/2')
 
 print(response.text)
 
+#Instructions 4/4
+
+#Send a DELETE request to the URL for the playlist with PlaylistId 2 and get the list of existing playlists to confirm removal.
+
+# Import the requests package
+import requests
+
+# Send a DELETE request to the URL for the playlist with PlaylistId 2
+response = requests.delete('http://localhost:3000/playlists/2')
+
+# Get the list of all playlists
+response = requests.get('http://localhost:3000/playlists')
+
+# Print the response text
+print(response.text)

@@ -17,3 +17,5 @@ response = requests.get('http://localhost:3000/playlists')
 
 # Print the response text to inspect the JSON text
 print(response.text)
+
+

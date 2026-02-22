@@ -25,3 +25,17 @@ response = requests.post('http://localhost:3000/playlists', data=playlist_data)
 # Print the response text
 print(response.text)
 
+#Instructions 3/4
+
+#Perform a GET request to get information on the playlist with PlaylistId 2.
+
+# Import the requests package
+import requests
+
+# Perform a GET request to get information on the playlist with PlaylistId 2
+response = requests.get('http://localhost:3000/playlists/2')
+
+# Print the response text
+
+print(response.text)
+

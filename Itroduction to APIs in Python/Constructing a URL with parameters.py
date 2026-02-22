@@ -31,3 +31,22 @@ response = requests.get('http://localhost:3000/lyrics/random', params=query_para
 
 # Print the response text
 print(response.text)
+
+#Instructions 3/3
+
+# Add a second item to the dictionary with the key `include_track` and the Boolean value `True`.
+# Print the response's `url` attribute to see the full URL.
+# Print out the lyric.
+
+# Import the requests package
+import requests
+
+# Create a dictionary variable with query params
+query_params = {'artist': 'Deep Purple', 'include_track': True}
+
+# Pass the dictionary to the get() function
+response = requests.get('http://localhost:3000/lyrics/random', params=query_params)
+
+# Print the response text
+print(response.url)
+print(response.text)

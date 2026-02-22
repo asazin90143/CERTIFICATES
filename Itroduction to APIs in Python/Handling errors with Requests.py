@@ -16,3 +16,16 @@ except ConnectionError as conn_err:
     
 #Instructions 2/2
 # Import the exception class used to detect errors returned via the response status code, then enable the setting on the response object which will automatically raise an error when an unsuccessful status code value is received. Finally, intercept the imported exception to print an error.
+
+# Import the correct exception class
+from requests.exceptions import HTTPError
+
+url ="http://localhost:3000/albums/"
+try: 
+    r = requests.get(url) 
+	# Enable raising errors for all error status_codes
+    r.raise_for_status()
+    print(r.status_code)
+# Intercept the error 
+except HTTPError as http_err:
+    print(f'HTTP error occurred: {http_err}')

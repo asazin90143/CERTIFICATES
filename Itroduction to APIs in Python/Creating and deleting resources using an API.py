@@ -9,3 +9,19 @@ import requests
 response = requests.get('http://localhost:3000/playlists')
 print(response.text)
 
+#Instructions 2/4
+
+#Create a dictionary with Name set to Rock Ballads, then perform a POST request with this dictionary as the data parameter.
+
+# Import the requests package
+import requests
+
+# Create a dictionary with the new playlist name
+playlist_data = {'Name': 'Rock Ballads'}
+
+# Perform a POST request to create the new playlist
+response = requests.post('http://localhost:3000/playlists', data=playlist_data)
+
+# Print the response text
+print(response.text)
+
